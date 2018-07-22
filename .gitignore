@@ -5,7 +5,6 @@
 /dist-server
 /tmp
 /out-tsc
-/.gitignore
 
 # dependencies
 /node_modules
