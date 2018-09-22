@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerMessageComponent implements OnInit {
 
+  bannerValue : boolean = true
   constructor() { }
 
   ngOnInit() {
   }
+
+ closeBanner() {
+    this.bannerValue = false
+  }
+
+  bannerActive = () => {
+    this.bannerValue = true
+  }
+ 
+  helloWorld = () => {
+    return 'Hello world!';
+  }
+
 
 }

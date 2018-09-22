@@ -20,7 +20,7 @@ describe('HeaderNavigatorComponent', () => {
     expectedMessage = 'Hello world!'
   });
 
-  fdescribe('test helloWorld', () => {
+  describe('test helloWorld', () => {
 
     it('says hello', () => {
       expect(component.helloWorld()).toBe(expectedMessage)

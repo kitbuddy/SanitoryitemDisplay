@@ -1,6 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, tick, fakeAsync } from '@angular/core/testing';
 
 import { BannerMessageComponent } from './banner-message.component';
+import { By } from '@angular/platform-browser';
+import { by } from 'protractor';
 
 describe('BannerMessageComponent', () => {
   let component: BannerMessageComponent;
@@ -22,4 +24,42 @@ describe('BannerMessageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+
+  describe("close button on banner ", () => {
+
+    it("should close banner", fakeAsync( () => {
+      fixture.detectChanges();
+      spyOn(component, 'closeBanner'); //method attached to the click.
+      debugger
+      let btn = fixture.debugElement.query(By.css('.close'));
+      btn.triggerEventHandler('click', null);
+      tick(); // simulates the passage of time until all pending asynchronous activities finish
+      fixture.detectChanges();
+
+
+
+      expect(component.closeBanner).toHaveBeenCalled();
+  }));
+
+  it('flag becomes false on close banner', fakeAsync(() => {
+
+    fixture.detectChanges()
+
+
+    spyOn(component, 'closeBanner')
+
+    let closebutton = fixture.debugElement.query(By.css(".close"))
+
+    closebutton.triggerEventHandler('click', null);
+
+    tick()
+
+    fixture.detectChanges()
+
+    expect(component.showBanner).toBe(true)
+  }))
+      
+    })
 });

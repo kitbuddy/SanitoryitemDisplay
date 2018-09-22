@@ -1,9 +1,28 @@
-<h2>this is app.component</h2>
-<h2>this is second change in second branch 
-</h2>
-<app-header-navigator></app-header-navigator>
+<head>
+    <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-<app-banner-message></app-banner-message>
-<app-image-component></app-image-component>
+<h1>
+       Welcome to {{ title }}!
+</h1>
 
-<app-angular-default></app-angular-default>
+    <app-header-navigator></app-header-navigator>
+
+    <app-banner-message></app-banner-message>
+
+    <app-image-component></app-image-component>
+
+    Hero List Component
+    <app-hero-list-basic></app-hero-list-basic>
+    Hero List Component end 
+
+
+
+    <button name="serviceButton"  (click)="getUserDataSer()" >click here for user model</button>
+
+<!-- <app-sliding-window></app-sliding-window> -->
+    <!-- <app-angular-default></app-angular-default> -->
+

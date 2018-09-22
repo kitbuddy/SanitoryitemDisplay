@@ -11,9 +11,11 @@ export class ImageComponentComponent implements OnInit {
   // serviceTest: any
 
   data: any = {}
+  
   constructor(
    
-    private serviceTest: ProvideTestJsonService
+    private serviceTest: ProvideTestJsonService,
+    
   ) {
 
     this.serviceTest = serviceTest
@@ -32,5 +34,6 @@ export class ImageComponentComponent implements OnInit {
       this.data = data
     })
   }
+
 
 }

@@ -1,4 +1,12 @@
-<div class="vc_row element-row row vc_custom_1478727859541">
+<button (click) = "bannerActive()">{{bannerValue ? true : false}} Banner</button>
+
+
+<div bannerMessage class="alert alert-success alert-dismissible" *ngIf = "bannerValue">
+  <a closeButton class="close" data-dismiss="alert" aria-label="close" (click)="closeBanner()" >&times;*</a>
+  <strong>Success!</strong> your order has been placed
+</div>
+
+<!-- <div class="vc_row element-row row vc_custom_1478727859541">
   <div class="wpb_column vc_column_container vc_col-sm-12">
     <div class="wpb_wrapper">
       <div class="fw-section hb-fw-599b22a654ae9 without-border no-overlay light-style" 
@@ -47,4 +55,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

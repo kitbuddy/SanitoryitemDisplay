@@ -7,11 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProvideTestJsonService {
 
   private configUrl = "https://jsonplaceholder.typicode.com/posts/1";
-  constructor(private httpclient : HttpClient) { 
-
-
-  }
-
+  constructor(private httpclient : HttpClient) { }
 
   public returnTestData () {
     return this.httpclient.get(this.configUrl)
